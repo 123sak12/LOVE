@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Roshan 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #fdfcfb, #e2d1c3, #ffdde1, #c3f2f2);
+      overflow-x: hidden;
+    }
+
+    .sky {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top right, #ffd1ff, #d6e0f0, #fff0f5);
+      z-index: -1;
+      animation: hueShift 20s infinite alternate;
+    }
+
+    @keyframes hueShift {
+      from { filter: hue-rotate(0deg); }
+      to   { filter: hue-rotate(360deg); }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .title {
+      font-size: 2.2em;
+      font-weight: bold;
+      color: #5d3a6a;
+      margin-bottom: 30px;
+    }
+
+    .slideshow {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .message {
+      font-size: 1.3em;
+      color: #444;
+      opacity: 0;
+      animation: slideShow 30s infinite;
+    }
+
+    .message:nth-child(2) { animation-delay: 6s; }
+    .message:nth-child(3) { animation-delay: 12s; }
+    .message:nth-child(4) { animation-delay: 18s; }
+    .message:nth-child(5) { animation-delay: 24s; }
+
+    @keyframes slideShow {
+      0%, 100% { opacity: 0; transform: scale(0.95); }
+      10%, 30% { opacity: 1; transform: scale(1); }
+      40%, 90% { opacity: 0; transform: scale(1); }
+    }
+
+    .hug-button {
+      margin-top: 40px;
+      padding: 15px 25px;
+      background: #ffb6b9;
+      color: white;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .hug-button:hover {
+      background: #ff6f91;
+      transform: scale(1.05);
+    }
+
+    .hug-container {
+      display: none;
+      margin-top: 30px;
+      animation: hugShow 1s ease-out forwards;
+    }
+
+    .hug-emoji {
+      font-size: 2.5em;
+      animation: pulse 1.5s infinite;
+    }
+
+    .hug-text {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #5a4b81;
+    }
+
+    @keyframes hugShow {
+      0% { opacity: 0; transform: scale(0.3); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+
+    @media (max-width: 500px) {
+      .title {
+        font-size: 1.8em;
+      }
+
+      .message {
+        font-size: 1.1em;
+      }
+
+      .hug-text {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="sky"></div>
+
+<div class="container">
+  <div class="title">Hey Roshan 🌈</div>
+
+  <div class="slideshow">
+    <div class="message">You're not alone. Not now. Not ever. 💛</div>
+    <div class="message">Life isn’t black & white — there’s color inside you 🌈</div>
+    <div class="message">You’re so loved, more than you know 💖</div>
+    <div class="message">You brighten lives just by being you ☀️</div>
+    <div class="message">You’re not broken — you’re beautifully human 🌻</div>
+  </div>
+
+  <button class="hug-button" onclick="showHug()">🤗 Tap me for a hug!</button>
+
+  <div class="hug-container" id="hugBox">
+    <div class="hug-emoji">🫂</div>
+    <div class="hug-text">Big warm hug, Roshan! You are safe, seen & so loved 💞</div>
+  </div>
+</div>
+
+<script>
+  function showHug() {
+    document.getElementById('hugBox').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
